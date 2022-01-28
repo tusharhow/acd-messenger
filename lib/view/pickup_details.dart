@@ -1,3 +1,5 @@
+import 'package:acd_messenger/view/change_status.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class PickUpDetails extends StatelessWidget {
@@ -87,22 +89,34 @@ class PickUpDetails extends StatelessWidget {
                   ),
                 ),
               ),
-              Container(
-                height: 60,
-                width: MediaQuery.of(context).size.width,
-                decoration: BoxDecoration(
-                  color: Color(0xffF7A444),
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.only(left: 20),
-                  child: Container(
-                    alignment: Alignment.centerLeft,
-                    child: Text(
-                      'Change Status ',
-                      style: TextStyle(
-                        fontSize: 22,
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
+              InkWell(
+                onTap: () {
+                  // Navigator.push(context,
+                  //     CupertinoPageRoute(builder: (c) => ChangeStatus()));
+                  showDialog(
+                    context: context,
+                    builder: (BuildContext context) {
+                      return alertDialog;
+                    },
+                  );
+                },
+                child: Container(
+                  height: 60,
+                  width: MediaQuery.of(context).size.width,
+                  decoration: BoxDecoration(
+                    color: Color(0xffF7A444),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 20),
+                    child: Container(
+                      alignment: Alignment.centerLeft,
+                      child: Text(
+                        'Change Status ',
+                        style: TextStyle(
+                          fontSize: 22,
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
                   ),
@@ -449,3 +463,238 @@ class PickUpDetails extends StatelessWidget {
     ));
   }
 }
+
+AlertDialog alertDialog = AlertDialog(
+  backgroundColor: Colors.white,
+  content: Container(
+    height: 450,
+    width: 210,
+    child: Column(
+      children: [
+        Text(
+          'Pickup Status',
+          style: TextStyle(
+            fontSize: 18,
+            color: Colors.red,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        Text(
+          '0620-20A00421',
+          style: TextStyle(
+            fontSize: 18,
+            color: Colors.red,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        SizedBox(
+          height: 15,
+        ),
+        InkWell(
+          onTap: () {},
+          child: Container(
+            height: 30,
+            width: 260,
+            decoration: BoxDecoration(
+              color: Colors.red,
+            ),
+            child: Center(
+              child: Text(
+                'Arrived at Pickup',
+                style: TextStyle(
+                  fontSize: 15,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+          ),
+        ),
+        SizedBox(
+          height: 15,
+        ),
+        InkWell(
+          onTap: () {},
+          child: Container(
+            height: 30,
+            width: 260,
+            decoration: BoxDecoration(
+              color: Colors.blue,
+            ),
+            child: Center(
+              child: Text(
+                'Still Waiting',
+                style: TextStyle(
+                  fontSize: 15,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+          ),
+        ),
+        SizedBox(
+          height: 15,
+        ),
+        InkWell(
+          onTap: () {},
+          child: Container(
+            height: 30,
+            width: 260,
+            decoration: BoxDecoration(
+              color: Colors.grey,
+            ),
+            child: Center(
+              child: Text(
+                'Problem – Traffic  Delay',
+                style: TextStyle(
+                  fontSize: 15,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+          ),
+        ),
+        SizedBox(
+          height: 15,
+        ),
+        InkWell(
+          onTap: () {},
+          child: Container(
+            height: 30,
+            width: 260,
+            decoration: BoxDecoration(
+              color: Colors.redAccent,
+            ),
+            child: Center(
+              child: Text(
+                'Problem –Accident (Delay)',
+                style: TextStyle(
+                  fontSize: 15,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+          ),
+        ),
+        SizedBox(
+          height: 15,
+        ),
+        InkWell(
+          onTap: () {},
+          child: Container(
+            height: 30,
+            width: 260,
+            decoration: BoxDecoration(
+              color: Colors.red,
+            ),
+            child: Center(
+              child: Text(
+                'Problem –Accident (Cancel)',
+                style: TextStyle(
+                  fontSize: 15,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+          ),
+        ),
+        SizedBox(
+          height: 15,
+        ),
+        InkWell(
+          onTap: () {},
+          child: Container(
+            height: 30,
+            width: 260,
+            decoration: BoxDecoration(
+              color: Colors.lightBlue,
+            ),
+            child: Center(
+              child: Text(
+                'Problem – Cancel',
+                style: TextStyle(
+                  fontSize: 15,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+          ),
+        ),
+        SizedBox(
+          height: 15,
+        ),
+        InkWell(
+          onTap: () {},
+          child: Container(
+            height: 30,
+            width: 260,
+            decoration: BoxDecoration(
+              color: Colors.green,
+            ),
+            child: Center(
+              child: Text(
+                'Issue – Package Not accurate',
+                style: TextStyle(
+                  fontSize: 15,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+          ),
+        ),
+        SizedBox(
+          height: 15,
+        ),
+        InkWell(
+          onTap: () {},
+          child: Container(
+            height: 30,
+            width: 260,
+            decoration: BoxDecoration(
+              color: Colors.pink,
+            ),
+            child: Center(
+              child: Text(
+                'Package Not accurate – Cannot take',
+                style: TextStyle(
+                  fontSize: 13,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+          ),
+        ),
+        SizedBox(
+          height: 15,
+        ),
+        InkWell(
+          onTap: () {},
+          child: Container(
+            height: 30,
+            width: 260,
+            decoration: BoxDecoration(
+              color: Colors.greenAccent,
+            ),
+            child: Center(
+              child: Text(
+                'Received Pickup',
+                style: TextStyle(
+                  fontSize: 15,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+          ),
+        ),
+      ],
+    ),
+  ),
+);
