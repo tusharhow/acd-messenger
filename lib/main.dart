@@ -1,9 +1,5 @@
-import 'package:acd_messenger/view/take_a_picture.dart';
-import 'package:acd_messenger/view/too_many_delivery_popup.dart';
+import 'package:acd_messenger/view/pickup_details.dart';
 import 'package:flutter/material.dart';
-import 'view/accept_delivery.dart';
-import 'view/check_for_delivery_screen.dart';
-import 'view/print_name.dart';
 import 'view/take_a_picture_two.dart';
 
 void main() {
@@ -22,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: TakeAPictureTwo(),
+      home: PickUpDetails(),
     );
   }
 }
