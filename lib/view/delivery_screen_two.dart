@@ -544,7 +544,7 @@ AlertDialog alertDialog = AlertDialog(
     child: Column(
       children: [
         Text(
-          'Pickup Status',
+          'Delivery Status',
           style: TextStyle(
             fontSize: 18,
             color: Colors.red,
@@ -572,7 +572,7 @@ AlertDialog alertDialog = AlertDialog(
             ),
             child: Center(
               child: Text(
-                'Arrived at Pickup',
+                'In Transit To Deliver',
                 style: TextStyle(
                   fontSize: 15,
                   color: Colors.white,
@@ -595,7 +595,7 @@ AlertDialog alertDialog = AlertDialog(
             ),
             child: Center(
               child: Text(
-                'Still Waiting',
+                'Arrived At Delivery ',
                 style: TextStyle(
                   fontSize: 15,
                   color: Colors.white,
@@ -618,7 +618,7 @@ AlertDialog alertDialog = AlertDialog(
             ),
             child: Center(
               child: Text(
-                'Problem – Traffic  Delay',
+                'Still Waiting',
                 style: TextStyle(
                   fontSize: 15,
                   color: Colors.white,
@@ -641,7 +641,7 @@ AlertDialog alertDialog = AlertDialog(
             ),
             child: Center(
               child: Text(
-                'Problem –Accident (Delay)',
+                'Traffic Delay',
                 style: TextStyle(
                   fontSize: 15,
                   color: Colors.white,
@@ -664,7 +664,7 @@ AlertDialog alertDialog = AlertDialog(
             ),
             child: Center(
               child: Text(
-                'Problem –Accident (Cancel)',
+                'Problem –Accident (Delay)',
                 style: TextStyle(
                   fontSize: 15,
                   color: Colors.white,
@@ -687,7 +687,7 @@ AlertDialog alertDialog = AlertDialog(
             ),
             child: Center(
               child: Text(
-                'Problem – Cancel',
+                'Problem –Accident (HELP)',
                 style: TextStyle(
                   fontSize: 15,
                   color: Colors.white,
@@ -733,7 +733,7 @@ AlertDialog alertDialog = AlertDialog(
             ),
             child: Center(
               child: Text(
-                'Package Not accurate – Cannot take',
+                'Complete',
                 style: TextStyle(
                   fontSize: 13,
                   color: Colors.white,
