@@ -1,9 +1,7 @@
-import 'package:acd_messenger/view/change_status.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class PickUpDetails extends StatelessWidget {
-  const PickUpDetails({Key? key}) : super(key: key);
+class DeliveryScreen extends StatelessWidget {
+  const DeliveryScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -79,7 +77,7 @@ class PickUpDetails extends StatelessWidget {
                   child: Container(
                     alignment: Alignment.centerLeft,
                     child: Text(
-                      'Pickup Status ',
+                      'Delivery Status ',
                       style: TextStyle(
                         fontSize: 22,
                         color: Colors.white,
@@ -91,8 +89,7 @@ class PickUpDetails extends StatelessWidget {
               ),
               InkWell(
                 onTap: () {
-                  // Navigator.push(context,
-                  //     CupertinoPageRoute(builder: (c) => ChangeStatus()));
+                 
                   showDialog(
                     context: context,
                     builder: (BuildContext context) {
@@ -187,7 +184,7 @@ class PickUpDetails extends StatelessWidget {
                   child: Container(
                     alignment: Alignment.centerLeft,
                     child: Text(
-                      'In transit to pickup',
+                      'Delivery in Transit',
                       style: TextStyle(
                         fontSize: 16,
                         color: Colors.blue,
