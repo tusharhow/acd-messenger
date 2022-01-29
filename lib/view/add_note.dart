@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class SignatureScreen extends StatelessWidget {
-  const SignatureScreen({Key? key}) : super(key: key);
+class AddNote extends StatelessWidget {
+  const AddNote({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -45,23 +45,7 @@ class SignatureScreen extends StatelessWidget {
             child: Container(
               alignment: Alignment.centerLeft,
               child: Text(
-                'Transaction #  0620-20A00421',
-                style: TextStyle(
-                  fontSize: 15,
-                  color: Colors.black54,
-                ),
-              ),
-            ),
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20),
-            child: Container(
-              alignment: Alignment.centerLeft,
-              child: Text(
-                'Enter Signature',
+                'Note',
                 style: TextStyle(
                   fontSize: 17,
                   color: Colors.black,
@@ -79,7 +63,8 @@ class SignatureScreen extends StatelessWidget {
               keyboardType: TextInputType.multiline,
 
               decoration: InputDecoration(
-                  isDense: true, hintText: 'Add Note Here',
+                  isDense: true,
+                  hintText: 'Add Note Here',
                   border: OutlineInputBorder(
                       borderSide: BorderSide(color: Colors.black))),
               maxLines: 7,
@@ -93,20 +78,20 @@ class SignatureScreen extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(right: 20),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.end,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 InkWell(
                   onTap: () {},
                   child: Container(
-                    width: 120,
+                    width: 130,
                     height: 45,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
-                      color: Color(0xff1E92DF),
+                      color: Colors.green,
                     ),
                     child: Center(
                       child: Text(
-                        'NEXT',
+                        'COMPLETE',
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 21,

@@ -1,4 +1,5 @@
 import 'package:acd_messenger/view/accept_delivery.dart';
+import 'package:acd_messenger/view/add_note.dart';
 import 'package:acd_messenger/view/pickup_details.dart';
 import 'package:acd_messenger/view/signature_screen.dart';
 import 'package:flutter/material.dart';
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: SignatureScreen(),
+      home: AddNote(),
     );
   }
 }
