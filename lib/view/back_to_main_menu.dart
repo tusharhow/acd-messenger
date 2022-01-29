@@ -1,4 +1,5 @@
 import 'package:acd_messenger/components/menu_container.dart';
+import 'package:acd_messenger/view/back_two_main_menu_three.dart';
 import 'package:flutter/material.dart';
 
 class BackToMainMenu extends StatelessWidget {
@@ -71,7 +72,63 @@ class BackToMainMenu extends StatelessWidget {
                     showDialog(
                         context: context,
                         builder: (context) {
-                          return alertDialog;
+                          return AlertDialog(
+                            backgroundColor: Colors.white,
+                            content: Container(
+                              height: 200,
+                              width: 210,
+                              child: Column(
+                                children: [
+                                  Text(
+                                    'PAUSE REQUESTED',
+                                    style: TextStyle(
+                                      fontSize: 18,
+                                      color: Colors.red,
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    height: 15,
+                                  ),
+                                  Text(
+                                    'By pressing the PAUSE  button below yourstatus will be \nlisted as Paused and you will \nnot be shown an work.',
+                                    style: TextStyle(
+                                      fontSize: 15,
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    height: 30,
+                                  ),
+                                  InkWell(
+                                    onTap: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  BackToMainMenuThree()));
+                                    },
+                                    child: Container(
+                                      height: 45,
+                                      width: 110,
+                                      decoration: BoxDecoration(
+                                        color: Colors.red,
+                                        borderRadius: BorderRadius.circular(10),
+                                      ),
+                                      child: Center(
+                                        child: Text(
+                                          'PAUSE',
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 20,
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          );
                         });
                   },
                   child: MainMenuContainer(
@@ -108,52 +165,3 @@ class BackToMainMenu extends StatelessWidget {
     );
   }
 }
-
-AlertDialog alertDialog = AlertDialog(
-  backgroundColor: Colors.white,
-  content: Container(
-    height: 200,
-    width: 210,
-    child: Column(
-      children: [
-        Text(
-          'PAUSE REQUESTED',
-          style: TextStyle(
-            fontSize: 18,
-            color: Colors.red,
-          ),
-        ),
-        SizedBox(
-          height: 15,
-        ),
-        Text(
-          'By pressing the PAUSE  button below yourstatus will be \nlisted as Paused and you will \nnot be shown an work.',
-          style: TextStyle(
-            fontSize: 15,
-          ),
-        ),
-        SizedBox(
-          height: 30,
-        ),
-        Container(
-          height: 45,
-          width: 110,
-          decoration: BoxDecoration(
-            color: Colors.red,
-            borderRadius: BorderRadius.circular(10),
-          ),
-          child: Center(
-            child: Text(
-              'PAUSE',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-          ),
-        ),
-      ],
-    ),
-  ),
-);
