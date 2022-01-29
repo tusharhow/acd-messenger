@@ -66,9 +66,18 @@ class BackToMainMenu extends StatelessWidget {
                 SizedBox(
                   height: 15,
                 ),
-                MainMenuContainer(
-                  containerColor: Color(0xff07C827),
-                  containerText: 'Status Available',
+                InkWell(
+                  onTap: () {
+                    showDialog(
+                        context: context,
+                        builder: (context) {
+                          return alertDialog;
+                        });
+                  },
+                  child: MainMenuContainer(
+                    containerColor: Color(0xff07C827),
+                    containerText: 'Status Available',
+                  ),
                 ),
                 SizedBox(
                   height: 20,
@@ -99,3 +108,52 @@ class BackToMainMenu extends StatelessWidget {
     );
   }
 }
+
+AlertDialog alertDialog = AlertDialog(
+  backgroundColor: Colors.white,
+  content: Container(
+    height: 200,
+    width: 210,
+    child: Column(
+      children: [
+        Text(
+          'PAUSE REQUESTED',
+          style: TextStyle(
+            fontSize: 18,
+            color: Colors.red,
+          ),
+        ),
+        SizedBox(
+          height: 15,
+        ),
+        Text(
+          'By pressing the PAUSE  button below yourstatus will be \nlisted as Paused and you will \nnot be shown an work.',
+          style: TextStyle(
+            fontSize: 15,
+          ),
+        ),
+        SizedBox(
+          height: 30,
+        ),
+        Container(
+          height: 45,
+          width: 110,
+          decoration: BoxDecoration(
+            color: Colors.red,
+            borderRadius: BorderRadius.circular(10),
+          ),
+          child: Center(
+            child: Text(
+              'PAUSE',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
+        ),
+      ],
+    ),
+  ),
+);
