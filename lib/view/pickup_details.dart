@@ -1,5 +1,3 @@
-import 'package:acd_messenger/view/change_status.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class PickUpDetails extends StatelessWidget {
